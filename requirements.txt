@@ -26,12 +26,12 @@ botocore==1.24.46
     # via
     #   boto3
     #   s3transfer
-celery-redbeat==2.0.0
-    # via -r requirements.in
 celery==4.4.2
     # via
     #   -r requirements.in
     #   celery-redbeat
+celery-redbeat==2.0.0
+    # via -r requirements.in
 certifi==2019.11.28
     # via
     #   requests
@@ -55,7 +55,7 @@ cssselect==1.1.0
     # via toronado
 cssutils==1.0.2
     # via toronado
-dataclasses_json==0.5.7
+dataclasses-json==0.5.7
     # via -r requirements.in
 defusedxml==0.6.0
     # via
@@ -64,6 +64,20 @@ defusedxml==0.6.0
     #   social-auth-core
 dj-database-url==0.5.0
     # via -r requirements.in
+django==3.2.12
+    # via
+    #   -r requirements.in
+    #   django-axes
+    #   django-cors-headers
+    #   django-deprecate-fields
+    #   django-extensions
+    #   django-filter
+    #   django-picklefield
+    #   django-redis
+    #   django-rest-hooks
+    #   django-structlog
+    #   djangorestframework
+    #   drf-spectacular
 django-axes==5.9.0
     # via -r requirements.in
 django-cors-headers==3.5.0
@@ -84,27 +98,11 @@ django-picklefield==3.0.1
     # via -r requirements.in
 django-redis==4.12.1
     # via -r requirements.in
-git+https://github.com/zapier/django-rest-hooks.git@v1.6.0
+django-rest-hooks @ git+https://github.com/zapier/django-rest-hooks.git@v1.6.0
     # via -r requirements.in
 django-statsd==2.5.2
     # via -r requirements.in
 django-structlog==2.1.3
-    # via -r requirements.in
-django==3.2.12
-    # via
-    #   -r requirements.in
-    #   django-axes
-    #   django-cors-headers
-    #   django-deprecate-fields
-    #   django-extensions
-    #   django-filter
-    #   django-picklefield
-    #   django-redis
-    #   django-rest-hooks
-    #   django-structlog
-    #   djangorestframework
-    #   drf-spectacular
-djangorestframework-csv==2.1.0
     # via -r requirements.in
 djangorestframework==3.12.2
     # via
@@ -113,6 +111,8 @@ djangorestframework==3.12.2
     #   drf-exceptions-hog
     #   drf-extensions
     #   drf-spectacular
+djangorestframework-csv==2.1.0
+    # via -r requirements.in
 dnspython==2.2.1
     # via -r requirements.in
 drf-exceptions-hog==0.2.0
@@ -135,7 +135,7 @@ importlib-metadata==1.6.0
     # via -r requirements.in
 importlib-resources==5.7.1
     # via jsonschema
-git+https://github.com/PostHog/infi.clickhouse_orm@de88ffaecda8c36c693cc51909a3598cb9725fde
+infi-clickhouse-orm @ git+https://github.com/PostHog/infi.clickhouse_orm@de88ffaecda8c36c693cc51909a3598cb9725fde
     # via -r requirements.in
 inflection==0.5.1
     # via drf-spectacular
@@ -164,12 +164,12 @@ lxml==4.7.1
     #   xmlsec
 lzstring==1.0.4
     # via -r requirements.in
-marshmallow-enum==1.5.1
-    # via dataclasses-json
 marshmallow==3.15.0
     # via
     #   dataclasses-json
     #   marshmallow-enum
+marshmallow-enum==1.5.1
+    # via dataclasses-json
 mimesis==5.2.1
     # via -r requirements.in
 monotonic==1.5
@@ -200,7 +200,7 @@ ptyprocess==0.6.0
     # via pexpect
 pycparser==2.20
     # via cffi
-pyjwt==2.1.0
+pyjwt==2.4.0
     # via social-auth-core
 pyparsing==3.0.7
     # via packaging
@@ -233,10 +233,6 @@ redis==3.4.1
     #   -r requirements.in
     #   celery-redbeat
     #   django-redis
-requests-oauthlib==1.3.0
-    # via
-    #   -r requirements.in
-    #   social-auth-core
 requests==2.25.1
     # via
     #   -r requirements.in
@@ -245,9 +241,13 @@ requests==2.25.1
     #   posthoganalytics
     #   requests-oauthlib
     #   social-auth-core
+requests-oauthlib==1.3.0
+    # via
+    #   -r requirements.in
+    #   social-auth-core
 s3transfer==0.5.2
     # via boto3
-semantic_version==2.8.5
+semantic-version==2.8.5
     # via -r requirements.in
 sentry-sdk==1.3.1
     # via -r requirements.in
