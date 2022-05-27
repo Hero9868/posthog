@@ -1420,6 +1420,7 @@ export interface PreflightStatus {
 export enum ItemMode { // todo: consolidate this and dashboardmode
     Edit = 'edit',
     View = 'view',
+    Subscribe = 'subscribe',
 }
 
 export enum DashboardPlacement {
@@ -1869,4 +1870,16 @@ export enum ValueOptionType {
     MostRecent = 'most_recent',
     Previous = 'previous',
     OnDate = 'on_date',
+}
+
+export interface SubscriptionType {
+    id: number
+    insight_id: string
+    schedule: string
+    title: string
+    content: string
+    created_by?: UserBasicType | null
+    created_at: string
+    updated_at: string
+    deleted?: boolean
 }
