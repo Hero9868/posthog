@@ -134,8 +134,8 @@ jobs:
 
             - name: Stop/Start stack with Docker Compose
               run: |
-                  docker-compose -f docker-compose.dev.yml down
-                  docker-compose -f docker-compose.dev.yml up -d db &
+                  docker-compose down
+                  docker-compose up -d db &
 
             - name: Set up Python
               uses: actions/setup-python@v2
