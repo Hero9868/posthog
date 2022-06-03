@@ -24,7 +24,7 @@ export function createdAtColumn<T extends { created_at?: string | null }>(): Lem
 
 export function createdByColumn<T extends { created_by?: UserBasicType | null }>(): LemonTableColumn<T, 'created_by'> {
     return {
-        title: 'Created by',
+        title: 'Created by',
         dataIndex: 'created_by',
         render: function Render(_: any, item) {
             const { created_by } = item
